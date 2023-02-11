@@ -1,6 +1,8 @@
-﻿Public Class UCtrlButton
+﻿Imports System.Diagnostics.Eventing.Reader
+
+Public Class UCtrlButton
     ' Klassisisene meetod kuvatava pildi määramiseks
-    Private Sub selectMood(ByVal intMood As Integer)
+    Public Sub selectMood(ByVal intMood As Integer)
         pbButton.Image = imageListButton.Images(intMood)
     End Sub
     ' Avalik liidesmeetod
@@ -15,4 +17,14 @@
         End Select
     End Sub
 
+    Public Sub pbButton_Click(sender As Object, e As EventArgs) Handles pbButton.Click
+        'Public intValik As Integer
+        If (intValik = 0) Then
+            pbButton.Image = imageListButton.Images(1)
+            intValik = 1
+        ElseIf (intValik = 1) Then
+            pbButton.Image = imageListButton.Images(0)
+            intValik = 0
+        End If
+    End Sub
 End Class
