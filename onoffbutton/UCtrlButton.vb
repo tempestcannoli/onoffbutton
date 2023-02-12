@@ -16,15 +16,20 @@ Public Class UCtrlButton
                 Me.selectMood(0)
         End Select
     End Sub
+    Public Class GlobaleVariable
 
+        Public Var1 As Integer
+
+    End Class
     Public Sub pbButton_Click(sender As Object, e As EventArgs) Handles pbButton.Click
         'Public intValik As Integer
         If (intValik = 0) Then
-            pbButton.Image = imageListButton.Images(1)
+            pbButton.Image = imageListButton.Images(0)
             intValik = 1
         ElseIf (intValik = 1) Then
-            pbButton.Image = imageListButton.Images(0)
+            pbButton.Image = imageListButton.Images(1)
             intValik = 0
         End If
     End Sub
+
 End Class

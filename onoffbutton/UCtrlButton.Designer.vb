@@ -31,6 +31,7 @@ Partial Class UCtrlButton
         '
         'pbButton
         '
+        Me.pbButton.Image = CType(resources.GetObject("pbButton.Image"), System.Drawing.Image)
         Me.pbButton.Location = New System.Drawing.Point(86, 90)
         Me.pbButton.Name = "pbButton"
         Me.pbButton.Size = New System.Drawing.Size(220, 120)
