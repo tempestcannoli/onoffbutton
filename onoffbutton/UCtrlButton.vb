@@ -2,6 +2,7 @@
 
 Public Class UCtrlButton
     ' Klassisisene meetod kuvatava pildi määramiseks
+    Public Event Pressed()
     Public Sub selectMood(ByVal intMood As Integer)
         pbButton.Image = imageListButton.Images(intMood)
     End Sub
@@ -23,6 +24,7 @@ Public Class UCtrlButton
     End Class
     Public Sub pbButton_Click(sender As Object, e As EventArgs) Handles pbButton.Click
         'Public intValik As Integer
+        RaiseEvent Pressed()
         If (intValik = 0) Then
             pbButton.Image = imageListButton.Images(0)
             intValik = 1
